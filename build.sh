@@ -5,10 +5,12 @@ set -e
 START=`date +%s`
 BUILD_DATE="$(date +%Y%m%d)"
 
+mkdir -p $HOME/builds
+
 # Current directory of the git
 BL=$PWD/chopin_build_pe
 
-BD= $HOME/builds
+BD=$HOME/builds
 BRANCH=twelve-plus
 PEMK=$BL/peplus.mk
 
@@ -47,7 +49,6 @@ applyPatches() {
 setupEnv() {
     echo "Setting up build environment..."
     source build/envsetup.sh &>/dev/null
-    mkdir -p $BD
     echo "Done setting up."
 }
 
