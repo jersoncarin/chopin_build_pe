@@ -14,7 +14,7 @@ for b in $branches;do
         [ "$p" == vendor/hardware/overlay ] && p=vendor/hardware_overlay
         pushd $p
         for patch in $patches/patches/$tree/$b/$project/*.patch;do
-            git am $patch || exit
+            git am $patch --reject || exit
         done
         popd
     done
