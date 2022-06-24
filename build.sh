@@ -8,7 +8,7 @@ BUILD_DATE="$(date +%Y%m%d)"
 # Current directory of the git
 BL=$PWD/chopin_build_pe
 
-BD= ~/builds
+BD= $HOME/builds
 BRANCH=twelve-plus
 PEMK=$BL/peplus.mk
 
